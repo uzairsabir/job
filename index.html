@@ -7,9 +7,11 @@
       // Get jobId from URL
       const urlParams = new URLSearchParams(window.location.search);
       const jobId = urlParams.get("jobId");
+      const applied = urlParams.get("applied");
+      const saved = urlParams.get("saved");
 
       // Try to open app
-      window.location.href = `myapp://job?id=${jobId}`;
+      window.location.href = `myapp://job?id=${jobId}&applied=${applied}&saved=${saved}`;
 
       // If app not installed, go to Play Store after 2s
       setTimeout(() => {
